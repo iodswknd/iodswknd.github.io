@@ -1,11 +1,16 @@
 .mod-container {
-	display: flex;
+	display: grid;
+	padding-bottom: 2.6rem;
+	column-gap: 2rem;
+	row-gap: 2rem;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .mod {
-	border-bottom: 2px solid #1c1c1c;
+	position: relative;
 	width: 100%;
-	padding: 2rem 1rem;
+	border-bottom: 2px solid #1c1c1c;
+	margin: 2rem 1rem;
 	padding-bottom: 2.6rem;
 	display: grid;
 	row-gap: 1rem;
@@ -16,12 +21,8 @@
 						 "r r r r";
 }
 
-.mod p, .mod h3 {
+.mod p, .mod h3{
 	margin:0;
-}
-
-.mod h3 { /*web*/
-	margin-bottom: .6rem;
 }
 
 .mod-heading {
@@ -107,16 +108,20 @@
 }
 
 /* RESPONSIVE */
+@media screen and (min-width: 1001px) {
+	.mod h3 { /*web*/
+		margin-bottom: .6rem;
+	}
+}
+
 @media screen and (max-width: 1000px) {
 	.mod-container {
-		flex-direction: column;
+		grid-template-columns: 1fr;
+		grid-template-rows: repeat(3, minmax(0, 1fr));;
 	}
 }
 
 @media screen and (max-width: 1000px) and (min-width: 701px) {
-	.mod-container {
-		flex-direction: column;
-	}
 	.mod {
 		column-gap: 2rem;
 		grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -125,9 +130,14 @@
 						 	 "i t t"
 						 	 "i r r";
 	}
-	.mod-socials {
+	.mod-socials, .mod-headcanon, .mod-rec {
 		display: inline-flex;
 	    flex-direction: row;
+
+	}
+
+	.mod-socials h3, .mod-headcanon h3, .mod-rec h3{
+		width: 30%;
 
 	}
 
