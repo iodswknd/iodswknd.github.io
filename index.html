@@ -1,0 +1,79 @@
+<html>
+  <head>
+    <title>IwaOiDaiSuga Weekend 2022</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <div><h1>the stories of...</h1></div>
+      <div class="header-images">
+        <div id="iwa" class="image-square"><img src="images/iwa.png"/></div>
+        <div id="oikawa" class="image-square"><img src="images/oi.png"/></div>
+        <div id="daichi" class="image-square"><img src="images/dai.png"/></div>
+        <div id="suga" class="image-square"><img src="images/sug.png"/></div>
+      </div>
+    </header>
+    <div class="nav">
+      <ul>
+        <li><a href="/prompts" class="nav-item" id="prompts">prompts</a></li>
+        <li><a href="/rules" class="nav-item" id="rules">rules</a></li>
+        <li><a href="/faqs" class="nav-item" id="faqs">faqs</a></li>
+        <li><a href="/mods" class="nav-item" id="mods">mods</a></li>
+      </ul>
+    </div>
+    <div class="main-content">
+      <h2 class="no-margin">IwaOiDaiSuga Weekend 2022</h2>
+      <h3 class="no-top-margin">February 11 <span class="font-serif">&#8211;</span> February 14</h3>
+      <p>A fan-run event celebrating the OT4 of Iwaizumi Hajime, Oikawa Tooru, Sawamura Daichi, and Sugawara Koushi (also known as iwaoidaisuga). The event runs the weekend before Valentine's Day with a bonus day on 2/14. (After all, it is their jersey numbers).</p>
+      <p class="no-bottom-margin">Late Submissions will be accepted through February 18, 2022</p>
+    </div>
+    <footer>
+      <a href="https://twitter.com/iwaoidaisugawkd" class="social" id="twitter"></a>
+      <!-- <a href="#" class="social" id="ao3"></a> -->
+      <a href="https://curiouscat.qa/iwaoidaisugawkd" class="social" id="curiouscat"></a>
+    </footer>
+  </body>
+
+  <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+      var colors = ['#61b069', '#82d8c7', '#d66868', '#f7cf64'];
+      var images = $('.image-square') // gets the 4 image squares
+      var selectors = ['#iwa', '#oikawa', '#daichi', '#suga']
+
+      var interval = 5 * 1000
+
+      var index = 0
+      var total = 0
+
+
+      $(document).ready(function(){
+        $(selectors[index]).delay(1000).queue(function(){
+          $(this).css('background-color', colors[index]);
+          $(this).dequeue();
+        });
+
+        // Change the color to red after 4 seconds?    
+        setInterval(function() {
+          total += 1;
+          $(selectors[index]).delay(1000).queue(function(){
+            console.log('queueing gray');
+            $(this).css('background-color', 'gray');
+            $(this).dequeue();
+          });
+          index = (index + 1) % 4
+          console.log(index);
+          $(selectors[index]).delay(2000).queue(function(){
+            console.log('queueing color');
+            $(this).css('background-color', colors[index]);
+            $(this).dequeue();
+          });
+          console.log('times through:', total);
+        }, interval);
+      });
+  </script>
+</html>

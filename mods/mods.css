@@ -1,0 +1,153 @@
+.mod-container {
+	display: flex;
+}
+
+.mod {
+	border-bottom: 2px solid #1c1c1c;
+	width: 100%;
+	margin: 2rem 1rem;
+	padding-bottom: 2.6rem;
+	display: grid;
+	row-gap: 1rem;
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+	grid-template-areas: "h h h h"
+						 "i i i s"
+						 "t t t t"
+						 "r r r r";
+}
+
+.mod p, .mod h3 {
+	margin:0;
+}
+
+.mod h3 { /*web*/
+	margin-bottom: .6rem;
+}
+
+.mod-heading {
+	font-style: normal;
+	grid-area: h;
+}
+
+.mod-heading span {
+	background: white;
+	padding-right: .5rem;
+}
+
+.mod-heading:after {
+	content: "";
+    display: block;
+    width: calc(100% - 80px);
+    height: 2px;
+    background: #1c1c1c;
+    left: 80px;
+    top: -0.95rem;
+    position: relative;
+    z-index: -2;
+}
+
+.mod-image {
+	/*padding-right: 1.6rem;*/
+	grid-area: i;
+	/*width: 90%;*/
+}
+
+.mod-image img {
+	width: 100%;
+}
+
+.mod-socials {
+	grid-area: s;
+	display: flex;
+    flex-direction: column;
+    align-self: end;
+    align-items: center;
+}
+
+.mod-socials .social {
+	margin-top: 1.2rem;
+	margin-right: 0;
+	margin-left: 0;
+}
+
+.mod-headcanon {
+	grid-area: t;
+}
+
+.mod-rec {
+	grid-area: r;
+}
+
+.mod-rec p {
+	text-align: left;
+	/*width: 70%;*/
+	/*margin: auto;*/
+}
+
+.mod-rec .social {
+	display: inline-block;
+    margin: 0;
+    /*margin-left: .4rem;*/
+    background-size: 1.9rem;
+    min-height: 1.9rem;
+    height: max-content;
+    position: relative;
+    float: left;
+    width: 100%;
+}
+
+
+
+.social span, .social p {
+    padding: 0 1.6rem 0 3rem;
+    top: 0.4rem;
+    position: relative;
+}
+
+.tablet-only {
+	display: none;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 1000px) {
+	.mod-container {
+		flex-direction: column;
+	}
+}
+
+@media screen and (max-width: 1000px) and (min-width: 701px) {
+	.mod-container {
+		flex-direction: column;
+	}
+	.mod {
+		column-gap: 2rem;
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		grid-template-areas: "h h h"
+						 	 "i s s"
+						 	 "i t t"
+						 	 "i r r";
+	}
+	.mod-socials {
+		display: inline-flex;
+	    flex-direction: row;
+
+	}
+
+	.mod-socials .social {
+		margin: 0;
+		width: auto;
+	    height: 1.9rem;
+	}
+
+	.tablet-only {
+		display: inline;
+	}
+
+}
+
+@media screen and (max-width: 700px) {
+	.mod-socials .social {
+		width: 70%;
+		padding-bottom: 70%;
+	}
+}

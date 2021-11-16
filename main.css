@@ -1,0 +1,291 @@
+@font-face {
+    font-family: 'Mido Medium';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Mido Medium'), url('/fonts/Mido.woff') format('woff');
+}
+
+* {
+	box-sizing: border-box;
+	color: #1c1c1c;
+}
+
+html {
+	font-family: Montserrat, Arial, Helvetica, sans-serif;
+	max-width: 100%;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-family: "Mido Medium", Didot, Georgia, serif;
+	font-weight: normal;
+	line-height: 120%;
+	text-transform: lowercase;
+}
+
+h1, h2 {
+	font-style: italic;
+	margin: 1rem 0;
+}
+
+h2 {
+	font-size: 1.6rem;
+}
+
+
+body {
+	position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1280px;
+    margin: auto;
+    min-height: 100%;
+    padding: .6rem 1.2rem;
+}
+
+body > * {
+	margin-bottom: 1.69rem;
+}
+
+/* HEADER */
+.header-images {
+	display: flex;
+	width: 80%;
+	margin: auto;
+}
+
+.image-square {
+	/*flex: 25%;*/
+	margin: .5rem 1rem;
+	background-color: gray;
+	transition: background-color 2s ease;
+}
+
+.image-square img {
+	width: 100%;
+	height: 100%;
+	object-fit: : contain;
+	filter: grayscale(1);
+}
+
+#home {
+	background-image: url("/images/arrow.png");
+	background-size: contain;
+	display: block;
+	margin: 1.2rem;
+	width: 2rem;
+	height: 2rem;
+	position: absolute;
+    top: 0;
+    left: 0;
+    float: left;
+    cursor: pointer;
+}
+
+.page-header {
+	text-align: center;
+}
+
+.page-header h1 {
+	line-height: 3.3rem;
+	margin: 0;
+}
+
+/* NAV */
+.nav ul {
+	list-style: none;
+	display: flex;
+	text-transform: uppercase;
+	justify-content: center;
+	padding: 0;
+	margin: 0;
+}
+
+.nav-item {
+	display: block;
+	width: 11rem;
+	padding: .7rem 0;
+	margin: 0 1rem;
+	border: solid 1.5px gray;
+	text-align: center;
+	/*transition: all .2s ease;*/
+	text-decoration: none;
+	color: inherit;
+}
+
+.nav-item:hover, .nav-item:focus {
+	font-weight: bold;
+}
+
+#prompts {
+	border-color: #61b069;
+	color: #61b069;
+}
+
+#prompts:hover, #prompts:focus {
+	background-color: #61b069;
+	color: #fefefe;
+}
+
+#rules {
+	border-color: #82d8c7;
+	color: #82d8c7;
+}
+
+#rules:hover, #rules:focus {	
+	background-color: #82d8c7;
+	color: #fefefe;
+}
+
+#faqs {
+	border-color: #d66868;
+	color: #d66868;
+}
+
+#faqs:hover, #faqs:focus {
+	background-color: #d66868;
+	color: #fefefe;
+}
+
+#mods {
+	border-color: #f7cf64;
+	color: #f7cf64;
+}
+
+#mods:hover, #mods:focus {
+	background-color: #f7cf64;
+	color: #fefefe;
+}
+
+/* MAIN CONTENT */
+.main-content {
+	padding: 1.2rem;
+	margin: 0;
+	flex-grow: 1;
+}
+
+.main-content > h2:first-child {
+	font-size: 1.75rem;
+}
+
+
+/* FOOTER*/
+footer {
+	display: flex;
+	justify-content: right;
+	position: relative;
+	bottom: 0;
+	width: 100%;
+}
+
+.social {
+	display: block;
+	width: 2.6rem;
+	height: 2.6rem;
+	margin-left: 1.2rem;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    text-decoration: none;
+}
+
+.social:hover, .social:focus {
+	filter: grayscale(1);
+}
+
+#twitter {
+	background-image: url("/images/twitter.png");
+	background-size: contain;
+}
+
+#ao3 {
+	background-image: url("/images/ao3.png");
+	background-size: contain;
+}
+
+#curiouscat {
+	background-image: url("/images/curious cat.png");
+	background-size: contain;
+}
+
+
+/* RESPONSIVE */
+@media screen and (max-width: 1280px) {
+	body {
+		padding: .6rem 1.2rem;
+	}
+    .header-images  {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+	.header-images {
+		flex-wrap: wrap;
+	}
+
+	.image-square {
+		flex: 33%;
+		margin: 1rem;
+	}
+
+	.page-header h1 {
+		line-height: inherit;
+		margin: 0;
+		font-size: 1.3rem;
+		padding: 1rem 50px;
+	}
+
+    .nav {
+    	order: 4;
+    }
+    .nav ul {
+    	flex-direction: column;
+    }
+    .nav-item {
+    	width: auto;
+    	max-width: 100%;
+    	margin-bottom: 1.6rem;
+    }
+
+    footer {
+    	justify-content: center;
+    	position: inherit;
+    }
+
+    .social {
+    	margin: 0 .6rem;
+    }
+}
+
+/* OVERRIDES */
+.no-bottom-margin {
+	margin-bottom: 0 !important;
+}
+
+.no-top-margin {
+	margin-top: 0 !important;
+}
+
+.no-margin {
+	margin: 0 !important;
+}
+
+.font-serif {
+	font-family: serif;
+}
+
+.color-green {
+	color: #61b069;
+}
+
+.color-blue {
+	color: #82d8c7;
+}
+
+.color-red {
+	color: #d66868;
+}
+
+.color-yellow {
+	color: #f7cf64;
+}
