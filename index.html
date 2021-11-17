@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   </head>
-  <body>
+  <body class="hidden">
     <header>
       <div><h1>the stories of...</h1></div>
       <div class="header-images">
@@ -26,15 +26,15 @@
       </ul>
     </div>
     <div class="main-content">
-      <h2 class="no-margin">IwaOiDaiSuga Weekend 2022</h2>
+      <h2 class="page-title no-margin">IwaOiDaiSuga Weekend 2022</h2>
       <h3 class="no-top-margin">February 11 <span class="font-serif">&#8211;</span> February 14</h3>
       <p>A fan-run event celebrating the OT4 of Iwaizumi Hajime, Oikawa Tooru, Sawamura Daichi, and Sugawara Koushi (also known as iwaoidaisuga). The event runs the weekend before Valentine's Day with a bonus day on 2/14. (After all, it is their jersey numbers).</p>
       <p class="no-bottom-margin">Late Submissions will be accepted through February 18, 2022</p>
     </div>
     <footer>
-      <a href="https://twitter.com/iwaoidaisugawkd" class="social" id="twitter"></a>
-      <!-- <a href="#" class="social" id="ao3"></a> -->
-      <a href="https://curiouscat.qa/iwaoidaisugawkd" class="social" id="curiouscat"></a>
+      <a href="https://twitter.com/iwaoidaisugawkd" class="social"><span class="blue" id="twitter"></span></a>
+      <!-- <a href="#" class="social"><span class="red" id="ao3"></span></a> -->
+      <a href="https://curiouscat.qa/iwaoidaisugawkd" class="social"><span class="yellow" id="curiouscat"></span></a>
     </footer>
   </body>
 
@@ -52,6 +52,7 @@
 
 
       $(document).ready(function(){
+        $("body").removeClass("hidden");
         $(selectors[index]).delay(1000).queue(function(){
           $(this).css('background-color', colors[index]);
           $(this).dequeue();

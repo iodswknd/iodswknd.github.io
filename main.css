@@ -13,6 +13,11 @@
 html {
 	font-family: Montserrat, Arial, Helvetica, sans-serif;
 	max-width: 100%;
+	font-size: 90%;
+}
+
+body p {
+  font-size: 90%;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -27,8 +32,28 @@ h1, h2 {
 	margin: 1rem 0;
 }
 
+h1 {
+	font-size: 2rem;
+}
+
 h2 {
-	font-size: 1.6rem;
+	font-size: 1.7rem;
+}
+
+h3 {
+	font-size: 1.35rem;
+}
+
+h4 {
+	font-size: 1.1rem;
+}
+
+h5 {
+	font-size: 1rem;
+}
+
+h6 {
+	font-size: 1rem;
 }
 
 
@@ -47,10 +72,14 @@ body > * {
 	margin-bottom: 1.69rem;
 }
 
+.hidden {
+	display: none;
+}
+
 /* HEADER */
 .header-images {
 	display: flex;
-	width: 80%;
+	width: 82%;
 	margin: auto;
 }
 
@@ -164,8 +193,8 @@ body > * {
 	flex-grow: 1;
 }
 
-.main-content > h2:first-child {
-	font-size: 1.75rem;
+.page-title {
+	font-size: 1.85rem;
 }
 
 
@@ -180,12 +209,16 @@ footer {
 
 .social {
 	display: block;
-	width: 2.6rem;
-	height: 2.6rem;
 	margin-left: 1.2rem;
     cursor: pointer;
-    background-repeat: no-repeat;
     text-decoration: none;
+}
+
+.social span {
+	width: 2.6rem;
+	height: 2.6rem;
+    background-repeat: no-repeat;
+    float: left;
 }
 
 .social:hover, .social:focus {
@@ -231,8 +264,8 @@ footer {
 	.page-header h1 {
 		line-height: inherit;
 		margin: 0;
-		font-size: 1.3rem;
-		padding: 1rem 50px;
+		font-size: 1.55rem;
+		padding: .8rem 50px;
 	}
 
     .nav {
@@ -288,4 +321,20 @@ footer {
 
 .color-yellow {
 	color: #f7cf64;
+}
+
+.green {
+	filter: invert(62%) sepia(26%) saturate(654%) hue-rotate(75deg) brightness(93%) contrast(99%);
+}
+
+.blue {
+	filter: invert(78%) sepia(43%) saturate(280%) hue-rotate(118deg) brightness(91%) contrast(98%);
+}
+
+.red {
+	filter: invert(54%) sepia(20%) saturate(4591%) hue-rotate(323deg) brightness(97%) contrast(73%);
+}
+
+.yellow {
+	filter: invert(99%) sepia(93%) saturate(6531%) hue-rotate(312deg) brightness(108%) contrast(94%);
 }

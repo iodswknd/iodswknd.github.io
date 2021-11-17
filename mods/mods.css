@@ -1,8 +1,8 @@
 .mod-container {
 	display: grid;
 	padding-bottom: 2.6rem;
-	column-gap: 2rem;
-	row-gap: 2rem;
+	column-gap: 5rem;
+	row-gap: 5rem;
 	grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
@@ -10,7 +10,7 @@
 	position: relative;
 	width: 100%;
 	border-bottom: 2px solid #1c1c1c;
-	margin: 2rem 1rem;
+	/*margin: 2rem 1rem;*/
 	padding-bottom: 2.6rem;
 	display: grid;
 	row-gap: 1rem;
@@ -19,6 +19,15 @@
 						 "i i i s"
 						 "t t t t"
 						 "r r r r";
+}
+
+.mod h3 { 
+	margin-bottom: .6rem;
+}
+
+.mod .social {
+	display: flex;
+	align-items: center;
 }
 
 .mod p, .mod h3{
@@ -32,7 +41,7 @@
 
 .mod-heading span {
 	background: white;
-	padding-right: .5rem;
+	padding-right: 1rem;
 }
 
 .mod-heading:after {
@@ -61,12 +70,12 @@
 	grid-area: s;
 	display: flex;
     flex-direction: column;
-    align-self: end;
+    align-self: top;
     align-items: center;
 }
 
 .mod-socials .social {
-	margin-top: 1.2rem;
+	margin-bottom: 1.8rem;
 	margin-right: 0;
 	margin-left: 0;
 }
@@ -79,28 +88,24 @@
 	grid-area: r;
 }
 
-.mod-rec p {
-	text-align: left;
-	/*width: 70%;*/
-	/*margin: auto;*/
-}
-
 .mod-rec .social {
-	display: inline-block;
     margin: 0;
-    background-size: 1.9rem !important;
     min-height: 1.9rem;
     height: max-content;
     position: relative;
     width: 100%;
 }
 
+/*.mod-rec .social span {
+    background-size: 1.9rem !important;
+}*/
 
 
-.social span, .social p {
-    padding: 0 1.6rem 0 3rem;
-    top: 0.4rem;
+
+.social p {
+    padding: 0 1.6rem 0 1rem;
     position: relative;
+    width: calc(100% - 2.8rem);
 }
 
 .tablet-only {
@@ -109,8 +114,8 @@
 
 /* RESPONSIVE */
 @media screen and (min-width: 1001px) {
-	.mod h3 { /*web*/
-		margin-bottom: .6rem;
+	.mod-rec p {
+		width: 80%;
 	}
 }
 
@@ -121,7 +126,7 @@
 	}
 }
 
-@media screen and (max-width: 1000px) and (min-width: 701px) {
+@media screen and (max-width: 1000px) and (min-width: 721px) {
 	.mod {
 		column-gap: 2rem;
 		grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -138,13 +143,23 @@
 
 	.mod-socials h3, .mod-headcanon h3, .mod-rec h3{
 		width: 30%;
+		padding-right: 1rem;
 
 	}
 
 	.mod-socials .social {
 		margin: 0;
-		width: auto;
+		width: max-content;
+		max-width: 35%;
 	    height: 1.9rem;
+	}
+
+	.mod-headcanon p {
+		width: 70%;
+	}
+
+	.mod-rec a {
+		width: 70% !important;
 	}
 
 	.tablet-only {
@@ -153,12 +168,20 @@
 
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 720px) {
 	.mod-socials .social {
-		min-width: 2rem;
-		min-height: 2rem;
-		width: 60%;
-		padding-bottom: 60%;
+		min-width: 2.4rem;
+		width: -webkit-fill-available;
+	}
+
+	.mod-socials .social span {
+	    width: 70%;
+	    position: relative;
+	    padding-bottom: 70%;
+	    margin: auto;
+	    margin-left: 25%;
+	    right: 0;
+	    display: block;
 	}
 
 	.mod-rec .social {
