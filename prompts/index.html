@@ -6,6 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/prompts/prompts.css">
   </head>
   <body>
     <header class="page-header">
@@ -21,9 +22,166 @@
       </ul>
     </div>
     <div class="main-content">
-      <h2 class="no-margin page-title">Prompts</h2>
+      <h2 class="no-margin page-title color-red">Prompts</h2>
       <p>blah blah prompt stuff.</p>
-      <p class="no-bottom-margin">yuppers</p>
+
+      <div class="button-group">
+        <a onclick="toggleView(false, 0);" class="nav-item current" id="table-button">table</a>
+        <a onclick="toggleView(true, 1);" class="nav-item" id="list-button">list</a>
+      </div>
+
+      <div class="prompts">
+        <h4>Day 1</h4>
+        <table>
+          <colgroup>
+            <col class="tiers">
+            <col class="day">
+          </colgroup>
+          <tr>
+              <td> </td>
+              <th scope="col">Day 1</th>
+          </tr>
+          <tr>
+              <th scope="row">One Word</th>
+              <td>Lorem</td>
+          </tr>
+          <tr>
+              <th scope="row">Alternate Universe</th>
+              <td>Ipsum Doler</td>
+          </tr>
+          <tr>
+              <th scope="row">Trope</th>
+              <td>Sit Amet</td>
+          </tr>
+          <tr>
+              <th scope="row">Character</th>
+              <td>Iwaizumi Hajime</td>
+          </tr>
+      </table>
+
+      <h4>Day 2</h4>
+      <table>
+          <colgroup>
+            <col class="tiers">
+            <col class="day">
+          </colgroup>
+          <tr>
+              <td> </td>
+              <th scope="col">Day 2</th>
+          </tr>
+          <tr>
+              <th scope="row">One Word</th>
+              <td>Consectetur</td>
+          </tr>
+          <tr>
+              <th scope="row">Alternate Universe</th>
+              <td>Adipiscing Elit</td>
+          </tr>
+          <tr>
+              <th scope="row">Trope</th>
+              <td>Sed do Eiusmod</td>
+          </tr>
+          <tr>
+              <th scope="row">Character</th>
+              <td>Oikawa Tooru</td>
+          </tr>
+      </table>
+
+      <h4>Day 3</h4>
+      <table>
+          <colgroup>
+            <col class="tiers">
+            <col class="day">
+          </colgroup>
+          <tr>
+              <td> </td>
+              <th scope="col">Day 3</th>
+          </tr>
+          <tr>
+              <th scope="row">One Word</th>
+              <td>Tempor</td>
+          </tr>
+          <tr>
+              <th scope="row">Alternate Universe</th>
+              <td>Incididunt Ut</td>
+          </tr>
+          <tr>
+              <th scope="row">Trope</th>
+              <td>Labore et Dolore</td>
+          </tr>
+          <tr>
+              <th scope="row">Character</th>
+              <td>Sawamura Daichi</td>
+          </tr>
+      </table>
+
+      <h4>Day 4</h4>
+      <table>
+          <colgroup>
+            <col class="tiers">
+            <col class="day">
+          </colgroup>
+          <tr>
+              <td> </td>
+              <th scope="col">Day 4</th>
+          </tr>
+          <tr>
+              <th scope="row">One Word</th>
+              <td>Magna</td>
+          </tr>
+          <tr>
+              <th scope="row">Alternate Universe</th>
+              <td>Aliqua ut Enim</td>
+          </tr>
+          <tr>
+              <th scope="row">Trope</th>
+              <td>Ad Minim Veniam</td>
+          </tr>
+          <tr>
+              <th scope="row">Character</th>
+              <td>Sugawara Koushi</td>
+          </tr>
+      </table>
+    </div>
+
+      <!-- <div id="prompts-list" class="prompts">
+        <div class="day">
+          <h4>Day 1</h4>
+          <ul>
+              <li>One Word / Lorem</li>
+              <li>AU / Ipsum Doler</li>
+              <li>Trope / Sit Amet</li>
+              <li>Character / Iwaizumi Hajime</li>
+          </ul>
+        </div>
+        <div class="day">
+          <h4>Day 2</h4>
+          <ul>
+              <li>One Word / Consectetur</li>
+              <li>AU / Adipiscing Elit</li>
+              <li>Trope / Sed do Eiusmod</li>
+              <li>Character / Oikawa Tooru</li>
+          </ul>
+        </div>
+        <div class="day">
+          <h4>Day 3</h4>
+          <ul>
+              <li>One Word / Tempor</li>
+              <li>AU / Incididunt Ut</li>
+              <li>Trope / Labore et Dolore</li>
+              <li>Character / Sawamura Daichi</li>
+          </ul>
+        </div>
+        <div class="day">
+          <h4>Day 4</h4>
+          <ul>
+              <li>One Word / Magna</li>
+              <li>AU / Aliqua ut Enim</li>
+              <li>Trope / Ad Minim Veniam</li>
+              <li>Character / Sugawara Koushi</li>
+          </ul>
+        </div>
+      </div> -->
     </div>
     <footer>
       <a href="https://twitter.com/iwaoidaisugawkd" class="social"><span class="blue" id="twitter"></span></a>
@@ -34,4 +192,17 @@
 
   <script src="//code.jquery.com/jquery-1.12.4.js"></script>
   <!-- <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
+  <script>
+    var prompts = $('.prompts');
+    var buttons = $('.button-group .nav-item');
+    function toggleView(b, i) {
+      var j = (i + 1) % 2;
+      if (!(prompts[0].classList.contains("as-list") == b)){
+        prompts[0].classList.toggle("as-list");
+        buttons[j].classList.toggle("current");
+        buttons[i].classList.toggle("current");
+      }
+    }
+
+  </script>
 </html>

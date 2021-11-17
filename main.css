@@ -140,6 +140,7 @@ body > * {
 	/*transition: all .2s ease;*/
 	text-decoration: none;
 	color: inherit;
+	cursor: pointer;
 }
 
 .nav-item:hover, .nav-item:focus {
@@ -189,7 +190,6 @@ body > * {
 /* MAIN CONTENT */
 .main-content {
 	padding: 1.2rem;
-	margin: 0;
 	flex-grow: 1;
 }
 
@@ -286,8 +286,20 @@ footer {
     }
 
     .social {
-    	margin: 0 .6rem;
+    	margin: 0 3%;
+    	position: relative;
+    	min-width: 2.6rem;
+    	width: 10%;
     }
+
+    .social span {
+		/*min-width: 2.6rem;*/
+		/*min-height: 2.6rem;*/
+	    background-repeat: no-repeat;
+	    padding-bottom: 100%;
+	    position: relative;
+	    width: 100%;
+	}
 }
 
 /* OVERRIDES */

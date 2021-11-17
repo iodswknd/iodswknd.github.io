@@ -1,0 +1,148 @@
+table {
+    border-collapse: collapse;
+    /*border: 2px solid rgb(100, 100, 100);*/
+    /*letter-spacing: 1px;*/
+    margin: auto;
+    font-size: 90%;
+}
+
+ul {
+	font-size: 90%;
+    /*list-style-type: none;*/
+    /*padding: 0;*/
+    /*text-align: center;*/
+    margin: 0;
+    /*width: 220px;*/
+}
+
+.prompts {
+	display: flex;
+}
+
+.prompts:not(.as-list) {
+	justify-content: center;
+}
+
+.prompts h4 {
+	margin-bottom: .8rem;
+	text-transform: capitalize;
+}
+
+.prompts h4{
+	display: none;
+}
+
+table {
+    margin: 0;
+    margin-bottom: 1.6rem;
+}
+table:not(:first-of-type) tr>*:first-child {
+    display: none;
+}
+
+table:not(:first-of-type) {
+    border-left: 2px solid #1c1c1c;
+}
+
+td,
+th {
+    border-right: 2px solid #1c1c1c;
+    padding: 1rem;
+    text-align: center;
+    width: 160px;
+}
+
+td:last-child, th:last-child {
+    border: 0;
+}
+
+th {
+	font-family: "Mido Medium", Didot, Georgia, serif;
+	font-size: 120%;
+}
+
+.button-group {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.6rem;
+    font-size: 90%;
+    letter-spacing: 1px;
+}
+
+#table-button {
+	border-color: #61b069;
+	color: #61b069;
+}
+
+#table-button:hover, #table-button:focus, #table-button.current {
+	background-color: #61b069;
+	color: #fefefe;
+	font-weight: bold;
+}
+
+#list-button {
+	border-color: #82d8c7;
+	color: #82d8c7;
+}
+
+#list-button:hover, #list-button:focus, #list-button.current {	
+	background-color: #82d8c7;
+	color: #fefefe;
+	font-weight: bold;
+}
+
+
+.as-list{
+	flex-direction: column;
+}
+.as-list table:not(:first-child) tr>*:first-child {
+    display: table-cell;
+}
+.as-list table tr:first-child {
+	display: none;
+}
+.as-list table:not(:first-child) {
+    border-left: 0;
+}
+.as-list h4 {
+	display: block;
+	text-align: center;
+}
+
+.as-list th {
+	text-align: right;
+}
+.as-list td {
+	text-align: left;
+}
+
+@media screen and (max-width: 800px) {
+	.button-group {
+		display: none;
+	}
+    .prompts{
+		flex-direction: column;
+	}
+	table:not(:first-child) tr>*:first-child {
+	    display: table-cell;
+	}
+	table tr:first-child {
+		display: none;
+	}
+	table:not(:first-child) {
+	    border-left: 0;
+	}
+	.prompts h4 {
+		display: block;
+		text-align: center;
+	}
+
+	th {
+		text-align: right;
+	}
+	td {
+		text-align: left;
+	}
+}
