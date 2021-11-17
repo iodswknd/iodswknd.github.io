@@ -93,7 +93,7 @@
     min-height: 1.9rem;
     height: max-content;
     position: relative;
-    width: 100%;
+    width: 100% !important;
 }
 
 /*.mod-rec .social span {
@@ -170,7 +170,7 @@
 
 @media screen and (max-width: 720px) {
 	.mod-socials .social {
-		min-width: 2.4rem;
+		min-width: 2.8rem;
 		width: -webkit-fill-available;
 	}
 
@@ -184,8 +184,14 @@
 	    display: block;
 	}
 
-	.mod-rec .social {
-	    background-size: 2rem !important;
-	    min-height: 2rem;
+	.mod-rec .social span {
+	    min-width: 2.8rem;
+	    width: 15%;
+	    max-width: 3.3rem;
+	    min-height: 2.8rem;
+	    height: -webkit-fill-available;
+	    max-height: 3.3rem;
+
+	    /*min-height: 2rem;*/
 	}
 }

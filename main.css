@@ -292,7 +292,7 @@ footer {
     	width: 10%;
     }
 
-    .social span {
+    footer .social span {
 		/*min-width: 2.6rem;*/
 		/*min-height: 2.6rem;*/
 	    background-repeat: no-repeat;
