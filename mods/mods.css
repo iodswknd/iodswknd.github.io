@@ -93,7 +93,7 @@
     min-height: 1.9rem;
     height: max-content;
     position: relative;
-    width: 100% !important;
+    width: 100%;
 }
 
 /*.mod-rec .social span {
@@ -158,7 +158,7 @@
 		width: 70%;
 	}
 
-	.mod-rec a {
+	.mod-rec .social {
 		width: 70% !important;
 	}
 

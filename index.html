@@ -45,7 +45,7 @@
       var images = $('.image-square') // gets the 4 image squares
       var selectors = ['#iwa', '#oikawa', '#daichi', '#suga']
 
-      var interval = 5 * 1000
+      var interval = 2 * 1000
 
       var index = 0
       var total = 0
@@ -53,7 +53,7 @@
 
       $(document).ready(function(){
         $("body").removeClass("hidden");
-        $(selectors[index]).delay(1000).queue(function(){
+        $(selectors[index]).delay(500).queue(function(){
           $(this).css('background-color', colors[index]);
           $(this).dequeue();
         });
@@ -61,14 +61,14 @@
         // Change the color to red after 4 seconds?    
         setInterval(function() {
           total += 1;
-          $(selectors[index]).delay(1000).queue(function(){
+          $(selectors[index]).delay(550).queue(function(){
             console.log('queueing gray');
             $(this).css('background-color', 'gray');
             $(this).dequeue();
           });
           index = (index + 1) % 4
           console.log(index);
-          $(selectors[index]).delay(2000).queue(function(){
+          $(selectors[index]).delay(800).queue(function(){
             console.log('queueing color');
             $(this).css('background-color', colors[index]);
             $(this).dequeue();
