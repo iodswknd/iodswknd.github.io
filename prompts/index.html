@@ -8,22 +8,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/prompts/prompts.css">
   </head>
-  <body>
+  <body class="loading">
     <header class="page-header">
       <a href="/" id="home" class="green"></a>
       <h1>IwaOiDaiSuga Weekend 2022</h1>
     </header>
     <div class="nav">
       <ul>
-        <li><a href="/prompts" class="nav-item current" id="prompts">prompts</a></li>
+        <li><a href="/prompts" class="nav-item" id="prompts">prompts</a></li>
+        <li><a href="/guidelines" class="nav-item" id="guidelines">guidelines</a></li>
         <li><a href="/rules" class="nav-item" id="rules">rules</a></li>
-        <li><a href="/faqs" class="nav-item" id="faqs">faqs</a></li>
         <li><a href="/mods" class="nav-item" id="mods">mods</a></li>
       </ul>
     </div>
     <div class="main-content">
       <h2 class="no-margin page-title color-red">Prompts</h2>
-      <p>blah blah prompt stuff here is.</p>
+      <p>blah blah <strong>prompt</strong> stuff here is. Testing out <strong>bold</strong> words randomly being <strong>assigned colors</strong>. Idk why I feel like this is the thing to do <strong>but</strong> here I am. <strong>RIP Mimi</strong>.</p>
 
       <div class="button-group">
         <a onclick="toggleView(false, 0);" class="nav-item current" id="table-button">table</a>
@@ -191,6 +191,7 @@
   </body>
 
   <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+  <script type="application/javascript" src="/main.js"></script>
   <!-- <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
   <script>
     var prompts = $('.prompts');
