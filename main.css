@@ -15,6 +15,7 @@ html {
 	max-width: 100%;
 	/*font-size: 90%;*/
 	background-color: #fefefe;
+	font-size: 14px;
 }
 
 body p, .main-content ul {
