@@ -14,6 +14,7 @@ html {
 	font-family: Montserrat, Arial, Helvetica, sans-serif;
 	max-width: 100%;
 	font-size: 90%;
+	background-color: #fefefe;
 }
 
 body p, .main-content ul {
@@ -33,31 +34,31 @@ h1,h2,h3,h4,h5,h6 {
 
 h1, h2 {
 	font-style: italic;
-	margin: 1rem 0;
+	margin: 1em 0;
 }
 
 h1 {
-	font-size: 2rem;
+	font-size: 2em;
 }
 
 h2 {
-	font-size: 1.7rem;
+	font-size: 1.7em;
 }
 
 h3 {
-	font-size: 1.35rem;
+	font-size: 1.35em;
 }
 
 h4 {
-	font-size: 1.1rem;
+	font-size: 1.1em;
 }
 
 h5 {
-	font-size: 1rem;
+	font-size: 1em;
 }
 
 h6 {
-	font-size: 1rem;
+	font-size: 1em;
 }
 
 
@@ -69,11 +70,11 @@ body {
     max-width: 1280px;
     margin: auto;
     min-height: 100%;
-    padding: .6rem 1.2rem;
+    padding: .6em 1.2em;
 }
 
 body > * {
-	margin-bottom: 1.69rem;
+	margin-bottom: 1.69em;
 }
 
 .loading {
@@ -90,7 +91,7 @@ body > * {
 
 .image-square {
 	/*flex: 25%;*/
-	margin: .5rem 1rem;
+	margin: .5em 1em;
 	background-color: gray;
 	transition: background-color 2s ease;
 }
@@ -106,9 +107,9 @@ body > * {
 	background-image: url("/images/arrow.png");
 	background-size: contain;
 	display: block;
-	margin: 1.2rem;
-	width: 2rem;
-	height: 2rem;
+	margin: 1.2em;
+	width: 2em;
+	height: 2em;
 	position: absolute;
     top: 0;
     left: 0;
@@ -121,7 +122,7 @@ body > * {
 }
 
 .page-header h1 {
-	line-height: 3.3rem;
+	line-height: 3.3em;
 	margin: 0;
 }
 
@@ -137,9 +138,9 @@ body > * {
 
 .nav-item {
 	display: block;
-	width: 11rem;
-	padding: .7rem 0;
-	margin: 0 1rem;
+	width: 11em;
+	padding: .7em 0;
+	margin: 0 1em;
 	border: solid 1.5px gray;
 	text-align: center;
 	/*transition: all .2s ease;*/
@@ -194,14 +195,14 @@ body > * {
 
 /* MAIN CONTENT */
 .main-content {
-	padding: 1.2rem 0;
+	padding: 1.2em 0;
 	flex-grow: 1;
 	max-width: 1000px;
 	margin: auto;
 }
 
 .page-title {
-	font-size: 1.85rem;
+	font-size: 1.85em;
 }
 
 
@@ -216,14 +217,14 @@ footer {
 
 .social {
 	display: block;
-	margin-left: 1.2rem;
+	margin-left: 1.2em;
     cursor: pointer;
     text-decoration: none;
 }
 
 .social span {
-	width: 2.6rem;
-	height: 2.6rem;
+	width: 2.6em;
+	height: 2.6em;
     background-repeat: no-repeat;
     float: left;
 }
@@ -251,7 +252,7 @@ footer {
 /* RESPONSIVE */
 @media screen and (max-width: 1080px) {
 	body {
-		padding: .6rem 1.2rem;
+		padding: .6em 1.2em;
 	}
     .header-images  {
         width: 100%;
@@ -259,7 +260,7 @@ footer {
     }
 
     .main-content {
-    	padding: 1.2rem;
+    	padding: 1.2em;
     }
 }
 
@@ -270,14 +271,14 @@ footer {
 
 	.image-square {
 		flex: 33%;
-		margin: 1rem;
+		margin: 1em;
 	}
 
 	.page-header h1 {
 		line-height: inherit;
 		margin: 0;
-		font-size: 1.55rem;
-		padding: .8rem 50px;
+		font-size: 1.55em;
+		padding: .8em 50px;
 	}
 
     .nav {
@@ -289,11 +290,11 @@ footer {
     .nav-item {
     	width: auto;
     	max-width: 100%;
-    	margin-bottom: 1.6rem;
+    	margin-bottom: 1.6em;
     }
 
     .main-content {
-		padding: 1rem;
+		padding: 1em;
 	}
 
     footer {
@@ -304,13 +305,13 @@ footer {
     .social {
     	margin: 0 3%;
     	position: relative;
-    	min-width: 2.6rem;
+    	min-width: 2.6em;
     	width: 10%;
     }
 
     footer .social span {
-		/*min-width: 2.6rem;*/
-		/*min-height: 2.6rem;*/
+		/*min-width: 2.6em;*/
+		/*min-height: 2.6em;*/
 	    background-repeat: no-repeat;
 	    padding-bottom: 100%;
 	    position: relative;
