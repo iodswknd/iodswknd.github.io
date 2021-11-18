@@ -20,6 +20,10 @@ body p, .main-content ul {
   font-size: 95%;
 }
 
+a:hover {
+	filter: grayscale(1);
+}
+
 h1,h2,h3,h4,h5,h6 {
 	font-family: "Mido Medium", Didot, Georgia, serif;
 	font-weight: normal;

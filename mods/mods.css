@@ -103,9 +103,13 @@
 
 
 .social p {
-    padding: 0 1.6rem 0 1rem;
+    padding: 0 1.6rem 0 .6rem;
     position: relative;
     width: calc(100% - 2.8rem);
+}
+
+.mod-rec .social p {
+    padding: 0 .8rem 0 .6rem;
 }
 
 .tablet-only {
