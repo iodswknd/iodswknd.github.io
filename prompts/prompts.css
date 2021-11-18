@@ -3,11 +3,11 @@ table {
     /*border: 2px solid rgb(100, 100, 100);*/
     /*letter-spacing: 1px;*/
     margin: auto;
-    font-size: 90%;
+    /*font-size: 90%;*/
 }
 
 ul {
-	font-size: 90%;
+	/*font-size: 90%;*/
     /*list-style-type: none;*/
     /*padding: 0;*/
     /*text-align: center;*/
@@ -58,7 +58,7 @@ td:last-child, th:last-child {
 
 th {
 	font-family: "Mido Medium", Didot, Georgia, serif;
-	font-size: 120%;
+	/*font-size: 110%;*/
 }
 
 .button-group {
