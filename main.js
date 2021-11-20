@@ -8,7 +8,7 @@ $(document).ready(function(){
 	});
 
 	$('.reg-ref').each(function() {
-		var i = Math.floor(Math.random() * 3); 
+		var i = Math.floor(Math.random() * 2); 
 		this.classList.add(clss[i]);
 	});
 

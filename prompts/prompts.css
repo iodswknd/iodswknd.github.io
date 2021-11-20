@@ -4,6 +4,9 @@ table {
     /*letter-spacing: 1px;*/
     margin: auto;
     /*font-size: 90%;*/
+    text-transform: lowercase;
+    margin-bottom: 1.6em;
+	font-size: 1.22em;
 }
 
 ul {
@@ -17,55 +20,144 @@ ul {
 
 .prompts {
 	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
-.prompts:not(.as-list) {
-	justify-content: center;
-}
 
-.prompts h3 {
+h3 {
 	margin-bottom: .8em;
-	text-transform: capitalize;
+	/*text-transform: capitalize;*/
 }
 
-.prompts h3{
-	display: none;
+.prompts-card {
+	width: 100%;
+	max-width: 850px;
+	padding-bottom: 1em;
+	border-bottom: 2px solid #1c1c1c;
+	margin-bottom: 2em;
 }
 
-table {
+.prompts table {
+	margin: 3em auto;
+}
+
+.color-section {
+	display: flex;
+	/*grid-template-columns: 1fr 1fr;
+	grid-gap: 2em;*/
+	text-align: center;
+	/*margin: 3em 0;*/
+	margin-bottom: 3em;
+}
+
+.colors {
+	width: 25%;
+}
+
+/*.colors h3 {
+	margin-top: 0;
+}*/
+
+.color-container {
+	display: flex;
+	flex-direction: column;
+	width: 75%;
+	/*height: 15em;*/
+	margin: auto;
+	border: 1px solid gray;
+	/*margin-bottom: 1.6em;*/
+}
+
+.color-container p {
+	width: 100%;
+    height: 3.246em;
     margin: 0;
-    margin-bottom: 1.6em;
-}
-table:not(:first-of-type) tr>*:first-child {
-    display: none;
+    padding-top: 1.05em;
 }
 
-table:not(:first-of-type) {
-    border-left: 2px solid #1c1c1c;
+.color-container p span {
+	display: none;
+    color: #fefefe;
+}
+
+.color-container p span.gray {
+    color: #666;
+}
+
+.color-container p:hover span {
+	display: inherit;
+}
+
+
+.prompts-card h2 {
+	font-style: normal;
+	margin-bottom: 0;
+	font-size: 180%;
+}
+
+.prompts-card h2 span {
+	background: #fefefe;
+	padding-right: .8rem;
+}
+
+.prompts-card h2::after {
+	content: "";
+    display: block;
+    width: calc(100% - 80px);
+    height: 2px;
+    background: #1c1c1c;
+    left: 80px;
+    top: -0.6em;
+    position: relative;
+    z-index: -2;
+}
+
+table:first-of-type {
+    border-left: 1px solid gray;
 }
 
 td,
 th {
-    border-right: 2px solid #1c1c1c;
-    padding: 1em;
+    border-right: 1px solid gray;
+    padding: 0.5em 1.3em;
     text-align: center;
-    width: 160px;
+    width: 140px;
 }
 
-td:last-child, th:last-child {
+/*td:last-child, th:last-child {
     border: 0;
-}
-
-th {
-	font-family: "Mido Medium", Didot, Georgia, serif;
+}*/
+tr {
+	/*height: 60px !important;*/
+	/*overflow: hidden;*/
 }
 
 table tr:first-of-type th{
+}
+
+.prompts table tr:first-of-type {
+	border-bottom: 1px solid #1c1c1c;
+}
+
+tr th {
 	font-size: 110%;
+    font-family: "Mido Medium", Didot, Georgia, serif;
 }
 
 table td {
-	font-size: 95%;
+	font-size: 86%;
+	font-family: Montserrat, Arial, Helvetica, sans-serif;
+}
+
+small {
+	font-family: Montserrat, Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	font-size: small;
+}
+
+h3>small {
+	line-height: 70%;
 }
 
 .button-group {
@@ -100,56 +192,56 @@ table td {
 	font-weight: bold;
 }
 
+.prompts-as-list {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 2em;
+}
 
-.as-list{
+
+.prompts-as-list .lists{
 	flex-direction: column;
 }
-.as-list table:not(:first-child) tr>*:first-child {
-    display: table-cell;
-}
-.as-list table tr:first-child {
-	display: none;
-}
-.as-list table:not(:first-child) {
+.prompts-as-list table:not(:first-child) {
     border-left: 0;
 }
-.as-list h3 {
+.prompts-as-list h3 {
 	display: block;
 	text-align: center;
 }
 
-.as-list th {
+.prompts-as-list th {
 	text-align: right;
 }
-.as-list td {
+.prompts-as-list td {
 	text-align: left;
+	border: 0;
+}
+
+.prompts-as-list .color-section {
+	flex-direction: column;
+}
+
+.prompts-as-list .colors {
+	width: 100%;
+}
+
+
+.hidden {
+	display: none;
 }
 
 @media screen and (max-width: 800px) {
-	.button-group {
+	.prompts {
 		display: none;
 	}
-    .prompts{
-		flex-direction: column;
+    .prompts-as-list{
+		display: grid;
 	}
-	table:not(:first-child) tr>*:first-child {
-	    display: table-cell;
-	}
-	table tr:first-child {
-		display: none;
-	}
-	table:not(:first-child) {
-	    border-left: 0;
-	}
-	.prompts h3 {
-		display: block;
-		text-align: center;
-	}
+}
 
-	th {
-		text-align: right;
-	}
-	td {
-		text-align: left;
+@media screen and (max-width: 650px) {
+    .prompts-as-list{
+		grid-template-columns: 1fr;
 	}
 }

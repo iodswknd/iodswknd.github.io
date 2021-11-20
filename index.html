@@ -11,26 +11,26 @@
     <header>
       <div><h1>the stories of...</h1></div>
       <div class="header-images">
-        <div id="iwa" class="image-square"><img src="images/iwa.png"/></div>
-        <div id="oikawa" class="image-square"><img src="images/oi.png"/></div>
-        <div id="daichi" class="image-square"><img src="images/dai.png"/></div>
-        <div id="suga" class="image-square"><img src="images/sug.png"/></div>
+        <div role="img" aria-label="Iwaizumi Hajime" id="iwa" class="image-square"><img src="images/iwa.png"/></div>
+        <div role="img" aria-label="Oikawa Tooru" id="oikawa" class="image-square"><img src="images/oi.png"/></div>
+        <div role="img" aria-label="Sawamura Daichi" id="daichi" class="image-square"><img src="images/dai.png"/></div>
+        <div role="img" aria-label="Sugawara Koushi" id="suga" class="image-square"><img src="images/sug.png"/></div>
       </div>
     </header>
-    <div class="nav">
+    <nav class="nav">
       <ul>
         <li><a href="/prompts" class="nav-item" id="prompts">prompts</a></li>
         <li><a href="/guidelines" class="nav-item" id="guidelines">guidelines</a></li>
         <li><a href="/rules" class="nav-item" id="rules">rules</a></li>
         <li><a href="/mods" class="nav-item" id="mods">mods</a></li>
       </ul>
-    </div>
-    <div class="main-content">
+    </nav>
+    <main class="main-content">
       <h2 class="page-title no-margin">IwaOiDaiSuga Weekend 2022</h2>
       <h3 class="no-top-margin">February 11 <span class="font-serif">&#8211;</span> February 14</h3>
       <p>A fan-run event celebrating the OT4 of Iwaizumi Hajime, Oikawa Tooru, Sawamura Daichi, and Sugawara Koushi (also known as iwaoidaisuga). The event runs the weekend before Valentine's Day with a bonus day on 2/14. (After all, it is their jersey numbers).</p>
       <p class="no-bottom-margin">Late Submissions will be accepted through February 18, 2022</p>
-    </div>
+    </main>
     <footer>
       <a target="_blank" href="https://twitter.com/iwaoidaisugawkd" class="social"><span class="blue" id="twitter"></span></a>
       <!-- <a target="_blank" href="#" class="social"><span class="red" id="ao3"></span></a> -->
@@ -52,7 +52,7 @@
       var total = 0
 
 
-      $(document).ready(function(){
+      $(document).on("load", function(){
         
         $(selectors[index]).delay(500).queue(function(){
           $(this).css('background-color', colors[index]);

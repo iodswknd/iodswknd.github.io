@@ -10,7 +10,7 @@
   </head>
   <body class="loading">
     <header class="page-header">
-      <a href="/" id="home" class="green"></a>
+      <a href="/" id="back"><span class="green" id="home"></span></a>
       <h1>IwaOiDaiSuga Weekend 2022</h1>
     </header>
     <div class="nav">
@@ -22,126 +22,232 @@
       </ul>
     </div>
     <div class="main-content">
-      <h2 class="no-margin page-title color-red">Prompts</h2>
-      <p>blah blah <strong>prompt</strong> stuff here is. Testing out <strong>bold</strong> words randomly being <strong>assigned colors</strong>. Idk why I feel like this is the thing to do <strong>but</strong> here I am. <strong>RIP Mimi</strong>.</p>
+      <h2 class="no-margin page-title">iwaoidaisuga <span class="color-red">weekend</span></h2>
+      <p>Below is the list of prompts for the event. There are four tiers (including the character "free" tier) and a bonus color scheme. Choose one for the day or mix and match them all. Read the event <a class="reg-ref" href="/guidelines">guidelines</a> to learn more information about the prompts as well as the event as a whole.</p>
 
-      <div class="button-group">
+      <!-- <div class="button-group">
         <a onclick="toggleView(false, 0);" class="nav-item current" id="table-button">table</a>
         <a onclick="toggleView(true, 1);" class="nav-item" id="list-button">list</a>
-      </div>
+      </div> -->
 
       <div class="prompts">
-        <h3>Day 1<br/>2/11</h3>
-        <table>
-          <colgroup>
-            <col class="tiers">
-            <col class="day">
-          </colgroup>
-          <tr>
-              <td> </td>
-              <th scope="col">Day 1<br/>2/11</th>
-          </tr>
-          <tr>
-              <th scope="row">Tier 1: Trope</th>
-              <td>Roommates</td>
-          </tr>
-          <tr>
-              <th scope="row">Tier 2: Alternate Universe</th>
-              <td>College</td>
-          </tr>
-          <tr>
-              <th scope="row">Tier 3: One Word</th>
-              <td>Seasons<br/><small>(Winter, Spring, Summer, Fall)</small></td>
-          </tr>
-          <tr>
-              <th scope="row">Bonus: Character</th>
-              <td>Sugawara Koushi</td>
-          </tr>
-      </table>
+        <article class="prompts-card" id="prompts-table">
+          <h2 class="prompt-heading">day <span class="color-green">prompts</span></h2>
+          <table>
+            <tr>
+                <td> </td>
+                <th scope="col">02.11.22<br/><small>day 1</small></th>
+                <th scope="col">02.12.22<br/><small>day 2</small></th>
+                <th scope="col">02.13.22<br/><small>day 3</small></th>
+                <th scope="col">02.14.22<br/><small>day 4</small></th>
+            </tr>
+            <tr>
+                <th scope="row">one word<br/><small>tier 1</small></th>
+                <td>Seasons<!--<br/><small>(Winter, Spring, Summer, Fall)</small>--></td>
+                <td>Stars</td>
+                <td>Mornings</td>
+                <td>Reunion</td>
+            </tr>
+            <tr>
+                <th scope="row">trope<br/><small>tier 2</small></th>
+                <td>Roommates</td>
+                <td>Getting Together</td>
+                <td>Mutual Pining</td>
+                <td>Bedsharing</td>
+            </tr>
+            <tr>
+                <th scope="row">au<br/><small>tier 3</small></th>
+                <td>College</td>
+                <td>Soulmate</td>
+                <td>Coffee Shop</td>
+                <td>Childhood Friends</td>
+            </tr>
+            <tr>
+                <th scope="row">character<br/><small>"free" tier</small></th>
+                <td>Sugawara Koushi</td>
+                <td>Oikawa Tooru</td>
+                <td>Sawamura Daichi</td>
+                <td>Iwaizumi Hajime</td>
+            </tr>
+        </table>
+      </article>
+      <article class="prompts-card" id="color-scheme">
+        <h2>color <span class="color-yellow">schemes</span></h2>
+        <div class="color-section">
+          <div class="colors">
+            <h3>02.11.22<br/><small>day 1</small></h3>
+            <div class="color-container">
+              <p style="background-color:#362c2b" onclick="copyToClipboard(this);"><span>#362c2b</span></p>
+              <p style="background-color:#6a8d92" onclick="copyToClipboard(this);"><span>#6a8d92</span></p>
+              <p style="background-color:#f7cf64" onclick="copyToClipboard(this);"><span class="gray">#f7cf64</span></p>
+              <p style="background-color:#f15152" onclick="copyToClipboard(this);"><span>#f15152</span></p>
+              <p style="background-color:#cc5a71" onclick="copyToClipboard(this);"><span>#cc5a71</span></p>
+            </div>
+          </div>
+          <div class="colors">
+            <h3>02.12.22<br/><small>day 2</small></h3>
+            <div class="color-container">
+              <p style="background-color:#561b47" onclick="copyToClipboard(this);"><span>#561b47</span></p>
+              <p style="background-color:#936896" onclick="copyToClipboard(this);"><span>#936896</span></p>
+              <p style="background-color:#bcebf1" onclick="copyToClipboard(this);"><span class="gray">#bcebf1</span></p>
+              <p style="background-color:#81d8c7" onclick="copyToClipboard(this);"><span class="gray">#81d8c7</span></p>
+              <p style="background-color:#45a3a4" onclick="copyToClipboard(this);"><span>#45a3a4</span></p>
+            </div>
+          </div>
+          <div class="colors">
+            <h3>02.13.22<br/><small>day 3</small></h3>
+            <div class="color-container">
+              <p style="background-color:#4f241a" onclick="copyToClipboard(this);"><span>#4f241a</span></p>
+              <p style="background-color:#d66867" onclick="copyToClipboard(this);"><span>#d66867</span></p>
+              <p style="background-color:#a69658" onclick="copyToClipboard(this);"><span>#a69658</span></p>
+              <p style="background-color:#d9b26f" onclick="copyToClipboard(this);"><span>#d9b26f</span></p>
+              <p style="background-color:#f9df7e" onclick="copyToClipboard(this);"><span class="gray">#f9df7e</span></p>
+            </div>
+          </div>
+          <div class="colors">
+            <h3>02.14.22<br/><small>day 4</small></h3>
+            <div class="color-container">
+              <p style="background-color:#212e50" onclick="copyToClipboard(this);"><span>#212e50</span></p>
+              <p style="background-color:#60b069" onclick="copyToClipboard(this);"><span>#60b069</span></p>
+              <p style="background-color:#2d7894" onclick="copyToClipboard(this);"><span>#2d7894</span></p>
+              <p style="background-color:#f2924e" onclick="copyToClipboard(this);"><span>#f2924e</span></p>
+              <p style="background-color:#fff" onclick="copyToClipboard(this);"><span class="gray">#ffffff</span></p>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+      
+      <div class="prompts-as-list hidden">
+        <article class="prompts-card" id="prompts-list">
+          <h2 class="prompt-heading">day <span class="color-green">prompts</span></h2>
+          <div class="lists">
+            <h3>02.11.22<br/><small>day 1</small></h3>
+            <table>
+              <tr>
+                  <th scope="row">one word<br/><small>tier 1</small></th>
+                  <td>Seasons</td>
+              </tr>
+              <tr>
+                  <th scope="row">trope<br/><small>tier 2</small></th>
+                  <td>Roommates</td>
+              </tr>
+              <tr>
+                  <th scope="row">alternate universe<br/><small>tier 3</small></th>
+                  <td>College</td>
+              </tr>
+              <tr>
+                  <th scope="row">character<br/><small>"free" tier</small></th>
+                  <td>Sugawara Koushi</td>
+              </tr>
+          </table>
 
-      <h3>Day 2<br/>2/12</h3>
-      <table>
-          <colgroup>
-            <col class="tiers">
-            <col class="day">
-          </colgroup>
-          <tr>
-              <td> </td>
-              <th scope="col">Day 2<br/>2/12</th>
-          </tr>
-          <tr>
-              <th scope="row">Tier 1: Trope</th>
-              <td>Getting Together</td>
-          </tr>
-          <tr>
-              <th scope="row">Tier 2: Alternate Universe</th>
-              <td>Soulmate/Soulbond</td>
-          </tr>
-          <tr>
-              <th scope="row">Tier 3: One Word</th>
-              <td>Stars</td>
-          </tr>
-          <tr>
-              <th scope="row">Bonus: Character</th>
-              <td>Oikawa Tooru</td>
-          </tr>
-      </table>
+          <h3>02.12.22<br/><small>day 2</small></h3>
+          <table>
+              <tr>
+                  <th scope="row">one word<br/><small>tier 1</small></th>
+                  <td>Stars</td>
+              </tr>
+              <tr>
+                  <th scope="row">trope<br/><small>tier 2</small></th>
+                  <td>Getting Together</td>
+              </tr>
+              <tr>
+                  <th scope="row">alternate universe<br/><small>tier 3</small></th>
+                  <td>Soulmate</td>
+              </tr>
+              <tr>
+                  <th scope="row">character<br/><small>"free" tier</small></th>
+                  <td>Oikawa Tooru</td>
+              </tr>
+          </table>
 
-      <h3>Day 3<br/>2/13</h3>
-      <table>
-          <colgroup>
-            <col class="tiers">
-            <col class="day">
-          </colgroup>
-          <tr>
-              <td> </td>
-              <th scope="col">Day 3<br/>2/13</th>
-          </tr>
-          <tr>
-              <th scope="row">Tier 1: Trope</th>
-              <td>Mutual Pining</td>
-          </tr>
-          <tr>
-              <th scope="row">Tier 2: Alternate Universe</th>
-              <td>Coffee Shop</td>
-          </tr>
-          <tr>
-              <th scope="row">Tier 3: One Word</th>
-              <td>Mornings</td>
-          </tr>
-          <tr>
-              <th scope="row">Bonus: Character</th>
-              <td>Sawamura Daichi</td>
-          </tr>
-      </table>
+          <h3>02.13.22<br/><small>day 3</small></h3>
+          <table>
+              <tr>
+                  <th scope="row">one word<br/><small>tier 1</small></th>
+                  <td>Mornings</td>
+              </tr>
+              <tr>
+                  <th scope="row">trope<br/><small>tier 2</small></th>
+                  <td>Mutual Pining</td>
+              </tr>
+              <tr>
+                  <th scope="row">alternate universe<br/><small>tier 3</small></th>
+                  <td>Coffee Shop</td>
+              </tr>
+              <tr>
+                  <th scope="row">character<br/><small>"free" tier</small></th>
+                  <td>Sawamura Daichi</td>
+              </tr>
+          </table>
 
-      <h3>Day 4<br/>2/14</h3>
-      <table>
-          <colgroup>
-            <col class="tiers">
-            <col class="day">
-          </colgroup>
-          <tr>
-              <td> </td>
-              <th scope="col">Day 4<br/>2/14</th>
-          </tr>
-          <tr>
-              <th scope="row">Tier 1: Trope</th>
-              <td>Bedsharing</td>
-          </tr>
-          <tr>
-              <th scope="row">Tier 2: Alternate Universe</th>
-              <td>Childhood Friends</td>
-          </tr>
-          <tr>
-              <th scope="row">Tier 3: One Word</th>
-              <td>Reunion</td>
-          </tr>
-          <tr>
-              <th scope="row">Bonus: Character</th>
-              <td>Iwaizumi Hajime</td>
-          </tr>
-      </table>
+          <h3>02.14.22<br/><small>day 4</small></h3>
+          <table>
+              <tr>
+                  <th scope="row">one word<br/><small>tier 1</small></th>
+                  <td>Reunion</td>
+              </tr>
+              <tr>
+                  <th scope="row">trope<br/><small>tier 2</small></th>
+                  <td>Bedsharing</td>
+              </tr>
+              <tr>
+                  <th scope="row">alternate universe<br/><small>tier 3</small></th>
+                  <td>Childhood Friends</td>
+              </tr>
+              <tr>
+                  <th scope="row">character<br/><small>"free" tier</small></th>
+                  <td>Iwaizumi Hajime</td>
+              </tr>
+          </table>
+        </div>
+      </article>
+      <article class="prompts-card" id="color-scheme">
+        <h2>color <span class="color-yellow">schemes</span></h2>
+        <div class="color-section">
+          <div class="colors">
+            <h3>02.11.22<br/><small>day 1</small></h3>
+            <div class="color-container">
+              <p style="background-color:#362c2b" onclick="copyToClipboard(this);"><span>#362c2b</span></p>
+              <p style="background-color:#6a8d92" onclick="copyToClipboard(this);"><span>#6a8d92</span></p>
+              <p style="background-color:#f7cf64" onclick="copyToClipboard(this);"><span class="gray">#f7cf64</span></p>
+              <p style="background-color:#f15152" onclick="copyToClipboard(this);"><span>#f15152</span></p>
+              <p style="background-color:#cc5a71" onclick="copyToClipboard(this);"><span>#cc5a71</span></p>
+            </div>
+          </div>
+          <div class="colors">
+            <h3>02.12.22<br/><small>day 2</small></h3>
+            <div class="color-container">
+              <p style="background-color:#561b47" onclick="copyToClipboard(this);"><span>#561b47</span></p>
+              <p style="background-color:#936896" onclick="copyToClipboard(this);"><span>#936896</span></p>
+              <p style="background-color:#bcebf1" onclick="copyToClipboard(this);"><span class="gray">#bcebf1</span></p>
+              <p style="background-color:#81d8c7" onclick="copyToClipboard(this);"><span class="gray">#81d8c7</span></p>
+              <p style="background-color:#45a3a4" onclick="copyToClipboard(this);"><span>#45a3a4</span></p>
+            </div>
+          </div>
+          <div class="colors">
+            <h3>02.13.22<br/><small>day 3</small></h3>
+            <div class="color-container">
+              <p style="background-color:#4f241a" onclick="copyToClipboard(this);"><span>#4f241a</span></p>
+              <p style="background-color:#d66867" onclick="copyToClipboard(this);"><span>#d66867</span></p>
+              <p style="background-color:#a69658" onclick="copyToClipboard(this);"><span>#a69658</span></p>
+              <p style="background-color:#d9b26f" onclick="copyToClipboard(this);"><span>#d9b26f</span></p>
+              <p style="background-color:#f9df7e" onclick="copyToClipboard(this);"><span class="gray">#f9df7e</span></p>
+            </div>
+          </div>
+          <div class="colors">
+            <h3>02.14.22<br/><small>day 4</small></h3>
+            <div class="color-container">
+              <p style="background-color:#212e50" onclick="copyToClipboard(this);"><span>#212e50</span></p>
+              <p style="background-color:#60b069" onclick="copyToClipboard(this);"><span>#60b069</span></p>
+              <p style="background-color:#2d7894" onclick="copyToClipboard(this);"><span>#2d7894</span></p>
+              <p style="background-color:#f2924e" onclick="copyToClipboard(this);"><span>#f2924e</span></p>
+              <p style="background-color:#fff" onclick="copyToClipboard(this);"><span class="gray">#ffffff</span></p>
+            </div>
+          </div>
+        </div>
+      </article>
     </div>
 
       <!-- <div id="prompts-list" class="prompts">
@@ -204,6 +310,14 @@
         buttons[i].classList.toggle("current");
       }
     }
+
+    function copyToClipboard(element) {
+        var $temp = $("<input>");
+        $("body").append($temp);
+        $temp.val(element.textContent).select();
+        document.execCommand("copy");
+        $temp.remove();
+      }
 
   </script>
 </html>

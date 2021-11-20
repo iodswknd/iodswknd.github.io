@@ -46,8 +46,13 @@ h2 {
 	font-size: 1.7em;
 }
 
+h3,h4,h5,h6 {
+	margin-bottom: .5em;
+}
+
 h3 {
 	font-size: 1.35em;
+	margin-top: 1.8em;
 }
 
 h4 {
@@ -104,18 +109,20 @@ body > * {
 	filter: grayscale(1);
 }
 
-#home {
-	background-image: url("/images/arrow.png");
-	background-size: contain;
+#back {
 	display: block;
-	margin: 1.2em;
-	width: 2em;
-	height: 2em;
-	position: absolute;
-    top: 0;
-    left: 0;
-    float: left;
-    cursor: pointer;
+	margin: 1.2rem;
+	float: left;
+    z-index: 99;
+
+}
+
+#home {
+	display: block;
+	background-image: url("/images/home.png");
+	background-size: contain;
+	width: 2rem;
+	height: 2rem;
 }
 
 .page-header {
@@ -123,8 +130,8 @@ body > * {
 }
 
 .page-header h1 {
-	line-height: 3.3em;
-	margin: 0;
+    line-height: 120%;
+    margin: 1.2rem 4.4rem;
 }
 
 /* NAV */
@@ -152,6 +159,7 @@ body > * {
 
 .nav-item:hover, .nav-item:focus {
 	font-weight: bold;
+	filter: none;
 }
 
 #prompts {
@@ -276,10 +284,10 @@ footer {
 	}
 
 	.page-header h1 {
-		line-height: inherit;
-		margin: 0;
+		/*line-height: inherit;*/
+		/*margin: 0;*/
 		font-size: 1.55em;
-		padding: .8em 50px;
+		/*padding: 1.2rem 4.4rem;*/
 	}
 
     .nav {

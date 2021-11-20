@@ -40,8 +40,8 @@
 }
 
 .mod-heading span {
-	background: white;
-	padding-right: 1em;
+	background: #fefefe;
+	padding-right: .8rem;
 }
 
 .mod-heading:after {
@@ -51,7 +51,7 @@
     height: 2px;
     background: #1c1c1c;
     left: 80px;
-    top: -0.95em;
+    top: -0.65em;
     position: relative;
     z-index: -2;
 }
