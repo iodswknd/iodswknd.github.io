@@ -257,6 +257,17 @@ footer {
 	background-size: contain;
 }
 
+.copy-popup {
+	/*display: none;*/
+	opacity: 0;
+	position: absolute;
+    background: #1c1c1c;
+    padding: 0.5em;
+    border-radius: 0.6em;
+    color: #fefefe;
+	transition: opacity 1s ease-out;
+}
+
 
 /* RESPONSIVE */
 @media screen and (max-width: 1080px) {
