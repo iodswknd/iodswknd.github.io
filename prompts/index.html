@@ -58,7 +58,7 @@
                 <td>Bedsharing</td>
             </tr>
             <tr>
-                <th scope="row">au<br/><small>tier 3</small></th>
+                <th scope="row" aria-label="alternate universe">au<br/><small>tier 3</small></th>
                 <td>College</td>
                 <td>Soulmate</td>
                 <td>Coffee Shop</td>
@@ -135,7 +135,7 @@
                   <td>Roommates</td>
               </tr>
               <tr>
-                  <th scope="row">alternate universe<br/><small>tier 3</small></th>
+                  <th scope="row" aria-label="alternate universe">au<br/><small>tier 3</small></th>
                   <td>College</td>
               </tr>
               <tr>
@@ -155,7 +155,7 @@
                   <td>Getting Together</td>
               </tr>
               <tr>
-                  <th scope="row">alternate universe<br/><small>tier 3</small></th>
+                  <th scope="row" aria-label="alternate universe">au<br/><small>tier 3</small></th>
                   <td>Soulmate</td>
               </tr>
               <tr>
@@ -175,7 +175,7 @@
                   <td>Mutual Pining</td>
               </tr>
               <tr>
-                  <th scope="row">alternate universe<br/><small>tier 3</small></th>
+                  <th scope="row" aria-label="alternate universe">au<br/><small>tier 3</small></th>
                   <td>Coffee Shop</td>
               </tr>
               <tr>
@@ -195,7 +195,7 @@
                   <td>Bedsharing</td>
               </tr>
               <tr>
-                  <th scope="row">alternate universe<br/><small>tier 3</small></th>
+                  <th scope="row" aria-label="alternate universe">au<br/><small>tier 3</small></th>
                   <td>Childhood Friends</td>
               </tr>
               <tr>
@@ -306,6 +306,7 @@
     var prompts = $('.prompts');
     var buttons = $('.button-group .nav-item');
     var colors = $('.color-container p');
+    var tables =$('table');
     var copied = $('.copy-popup')[0];
 
     function toggleView(b, i) {
@@ -338,6 +339,25 @@
         copied.style.opacity = 0;
       }, 1000);
     }
+
+    $(window).on("resize", function() {
+      var max = 0;
+      console.log(tables[1], colors);
+
+      tables.each(function(index) {
+        console.log(index);
+        if (this.clientHeight > max) {
+          console.log(this.clientHeight);
+          max = this.clientHeight;
+        }
+      });
+
+      // console.log(max);
+
+      colors.each(function() {
+        this.style.height = max / 5;
+      });
+    });
 
   </script>
 </html>
