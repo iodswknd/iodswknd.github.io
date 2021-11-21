@@ -324,14 +324,15 @@
     var t;
 
     function copyToClipboard(element) {
+      console.log(element);
       clearTimeout(t);
       var $temp = $("<input>");
       $("body").append($temp);
       $temp.val(element.target.textContent).select();
       document.execCommand("copy");
       $temp.remove();
-      copied.style.left = element.pageX;
-      copied.style.top = element.pageY;
+      copied.style.left = element.pageX-element.offsetX;
+      copied.style.top = element.pageY-element.offsetY;
       copied.style.opacity = 1
       t = setTimeout(function() {
         copied.style.opacity = 0;
