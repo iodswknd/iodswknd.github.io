@@ -117,7 +117,7 @@ h3 {
     height: 2px;
     background: #1c1c1c;
     left: 80px;
-    top: -0.6rem;
+    top: -0.6em;
     position: relative;
     z-index: -2;
 }
