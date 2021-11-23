@@ -5,8 +5,9 @@ table {
     margin: auto;
     /*font-size: 90%;*/
     text-transform: lowercase;
-    margin-bottom: 1.6em;
-	font-size: 1.22em;
+    margin-bottom: 1.6rem;
+	font-size: 1.3rem;
+	width: 100%;
 }
 
 ul {
@@ -26,33 +27,37 @@ ul {
 
 
 h3 {
-	margin-bottom: .8em;
+	margin-bottom: .8rem;
+	font-size: 1.6rem;
 	/*text-transform: capitalize;*/
 }
 
 .prompts-card {
 	width: 100%;
 	max-width: 850px;
-	padding-bottom: 1em;
+	padding-bottom: 1rem;
 	border-bottom: 2px solid #1c1c1c;
-	margin-bottom: 2em;
+	margin-bottom: 2rem;
 }
 
 .prompts table {
-	margin: 3em auto;
+	margin: 4rem auto;
 }
 
 .color-section {
-	display: flex;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-gap: 2.5rem;
 	/*grid-template-columns: 1fr 1fr;
-	grid-gap: 2em;*/
+	grid-gap: 2rem;*/
 	text-align: center;
-	/*margin: 3em 0;*/
-	margin-bottom: 3em;
+	margin: 4rem 0;
+	/*margin-bottom: 3rem;*/
 }
 
 .colors {
-	width: 25%;
+	/*width: 25%;*/
+	/*margin: 3rem 0;*/
 }
 
 /*.colors h3 {
@@ -61,19 +66,23 @@ h3 {
 
 .color-container {
 	display: flex;
-	flex-direction: column;
-	width: 75%;
-	/*height: 15em;*/
-	margin: auto;
+	/*flex-direction: column;*/
+	/*width: 75%;*/
+	/*height: 15rem;*/
+	/*margin: auto;*/
+	/*margin-top: 3rem;*/
 	border: 1px solid gray;
-	/*margin-bottom: 1.6em;*/
+	/*margin-bottom: 1.6rem;*/
 }
 
 .color-container p {
 	width: 100%;
-    height: 3.786em;
+    height: 181px;
     margin: 0;
-    padding-top: 1.05em;
+    padding: 0 7%;
+    writing-mode: vertical-lr;
+    text-orientation: sideways;
+    cursor: default;
 }
 
 .color-container p span {
@@ -108,7 +117,7 @@ h3 {
     height: 2px;
     background: #1c1c1c;
     left: 80px;
-    top: -0.6em;
+    top: -0.6rem;
     position: relative;
     z-index: -2;
 }
@@ -120,9 +129,9 @@ table:first-of-type {
 td,
 th {
     border-right: 1px solid gray;
-    padding: 0.5em 1.3em;
+    padding: 1.23rem 2.1rem;
     text-align: center;
-    width: 140px;
+    width: 170px;
 }
 
 /*td:last-child, th:last-child {
@@ -141,19 +150,19 @@ table tr:first-of-type th{
 }
 
 tr th {
-	font-size: 110%;
+	font-size: 120%;
     font-family: "Mido Medium", Didot, Georgia, serif;
 }
 
 table td {
-	font-size: 86%;
+	font-size: 95%;
 	font-family: Montserrat, Arial, Helvetica, sans-serif;
 }
 
 small {
 	font-family: Montserrat, Arial, Helvetica, sans-serif;
 	font-weight: normal;
-	font-size: small;
+	font-size: 70%;
 }
 
 h3>small {
@@ -165,7 +174,7 @@ h3>small {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 1.6em;
+    margin-bottom: 1.6rem;
     font-size: 90%;
     letter-spacing: 1px;
 }
@@ -195,7 +204,7 @@ h3>small {
 .prompts-as-list {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	grid-gap: 2em;
+	grid-gap: 2rem;
 }
 
 
@@ -219,7 +228,7 @@ h3>small {
 }
 
 .prompts-as-list .color-section {
-	flex-direction: column;
+	grid-template-columns: 1fr;
 }
 
 .prompts-as-list .colors {
@@ -231,12 +240,67 @@ h3>small {
 	display: none;
 }
 
-@media screen and (max-width: 780px) {
+#sug::after, #oi::after, #dai::after, #iwa::after {
+	content: "";
+	position: absolute;
+    float: right;
+    background-size: contain;
+    width: 5rem;
+    height: 5rem;
+    background-repeat: no-repeat;
+    z-index: -2;
+    margin-left: -1.8rem;
+    transform: rotate(8deg);
+    margin-top: -2.6rem;
+    opacity: .7;
+}
+
+#sug::after {
+    background-image: url(/images/tintedcolor_sugawara.png);
+}
+
+#oi::after {
+    background-image: url(/images/tintedcolor_oikawa.png);
+}
+
+#dai::after {
+    background-image: url(/images/tintedcolor_daichi.png);
+}
+
+#iwa::after {
+    background-image: url(/images/tintedcolor_iwaizumi.png);
+}
+
+@media screen and (max-width: 850px) {
+	.lists {
+		margin: 4rem 0;
+	}
+
 	.prompts {
 		display: none;
 	}
     .prompts-as-list{
 		display: grid;
+	}
+
+	table {
+		margin-bottom: 1rem;
+	}
+
+	.colors {
+		padding: 0 2rem;
+	}
+
+	.colors h3 {
+		margin-top: 2rem;
+	}
+
+	/*.color-section p {
+		font-size: 95%;
+	}*/
+
+	.color-section {
+		grid-gap: 2.7rem;
 	}
 }
 

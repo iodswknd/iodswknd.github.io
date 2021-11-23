@@ -214,6 +214,13 @@ body > * {
 	font-size: 1.85em;
 }
 
+.list-2-column {
+	display: grid;
+	grid-column-gap: 40px;
+	grid-template-columns: 1fr 1fr;
+	max-width: 640px;
+}
+
 
 /* FOOTER*/
 footer {
@@ -336,6 +343,10 @@ footer {
 	    padding-bottom: 100%;
 	    position: relative;
 	    width: 100%;
+	}
+
+	.list-2-column {
+		display: block;
 	}
 }
 
