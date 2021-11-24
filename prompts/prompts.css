@@ -324,6 +324,10 @@ h3>small {
     align-items: center;
 }
 
+#thething span {
+	font-size: inherit;
+}
+
 .option {
   color: gray;
   display: block;
