@@ -149,7 +149,7 @@ table tr:first-of-type th{
 	border-bottom: 1px solid #1c1c1c;
 }
 
-tr th {
+tr th, .heading {
 	font-size: 120%;
     font-family: "Mido Medium", Didot, Georgia, serif;
 }
@@ -235,6 +235,15 @@ h3>small {
 	width: 100%;
 }
 
+.prompts-text-only h2 {
+	margin-top: 2em;
+	margin-bottom: 0;
+	font-style: normal;
+}
+
+.prompts-text-only h3 {
+	margin-top: 1em;
+}
 
 .hidden {
 	display: none;
@@ -295,9 +304,9 @@ h3>small {
 		margin-top: 2rem;
 	}
 
-	/*.color-section p {
-		font-size: 95%;
-	}*/
+	.color-container p {
+		height: 11.8rem;
+	}
 
 	.color-section {
 		grid-gap: 2.7rem;
@@ -308,4 +317,74 @@ h3>small {
     .prompts-as-list{
 		grid-template-columns: 1fr;
 	}
+}
+
+#thething {
+	display: flex;
+    align-items: center;
+}
+
+.option {
+  color: gray;
+  display: block;
+  /*height: 80px;
+  line-height: 80px;*/
+  padding: 0 .8rem;
+  /*font-size: 40px;*/
+  float: left;
+  cursor: pointer;
+  /*width: 160px;*/
+}
+.option#option1 {
+  text-align: right;
+}
+.option#option2 {
+  text-align: left;
+}
+#thething.off #option1 {
+  color: #f7cf64;
+}
+
+#thething.on #option2 {
+  color: #f7cf64;
+}
+
+#switch {
+  background: #f7cf64;
+  border: 1px solid #f7cf64;
+  cursor: pointer;
+  display: block;
+  position: relative;
+  float: left;
+  width: 4em;
+  padding: .3em;
+  -moz-border-radius: 1.5em;
+  -webkit-border-radius: 1.5em;
+  border-radius: 1.5em;
+}
+
+#switch .handle {
+  display: block;
+  background: #fefefe;
+  height: 1.2em;
+  width: 1.2em;
+  -moz-border-radius: .7em;
+  -webkit-border-radius: .7em;
+  border-radius: .7em;
+}
+
+.off #switch {
+	background: #fefefe;
+}
+
+.off #switch .handle {
+	background: #f7cf64;
+}
+
+.text-only .prompts, .text-only .prompts-as-list {
+	display: none !important;
+}
+
+.text-only .prompts-text-only {
+	display: block !important;
 }
