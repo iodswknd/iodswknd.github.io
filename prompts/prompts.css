@@ -305,7 +305,7 @@ h3>small {
 	}
 
 	.color-container p {
-		height: 11.8rem;
+		min-height: 11.8rem;
 	}
 
 	.color-section {
