@@ -374,8 +374,8 @@
       $temp.val(element.target.textContent).select();
       document.execCommand("copy");
       $temp.remove();
-      copied.style.left = element.pageX-element.offsetX;
-      copied.style.top = element.pageY-element.offsetY;
+      copied.style.left = element.layerX;
+      copied.style.top = element.layerY;
       copied.style.opacity = 1
       t = setTimeout(function() {
         copied.style.opacity = 0;
