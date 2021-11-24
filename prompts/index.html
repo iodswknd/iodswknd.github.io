@@ -448,14 +448,12 @@
 
 
     function conditionMove() {
-      if(parseInt(switchHandle.css('left')) <= (sizeSwitch / 2)) {
+      if(parseInt(switchHandle.css('left')) <= (14)) {
         switchHandle.animate({
           left: 0
         }, 100);
         thething.addClass('off');
         thething.removeClass('on');
-        switchToText(false);
-        console.log('here');
       }
       else {
         switchHandle.animate({
@@ -464,12 +462,11 @@
         thething.addClass('on');
         thething.removeClass('off');
         switchToText(true);
-        console.log('here');
       }
     }
 
     function conditionMoveSnap() {
-      if(parseInt(switchHandle.css('left')) == sizeSwitch) {
+      if(parseInt(switchHandle.css('left')) >= 28) {
         switchHandle.animate({
           left: 0
         }, 100);
@@ -488,7 +485,7 @@
     }
 
     function switchToText(on) {
-      console.log(on, main.hasClass('text-only'));
+      // console.log(on, main.hasClass('text-only'));
       if (on & !main.hasClass('text-only')) {
         main.addClass('text-only');
       } else if ((!on) & main.hasClass('text-only')) {
