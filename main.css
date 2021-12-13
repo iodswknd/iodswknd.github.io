@@ -249,6 +249,11 @@ footer {
 	filter: grayscale(1);
 }
 
+#dynamics {
+	background-image: url("/images/click.png");
+	background-size: contain;
+}
+
 #twitter {
 	background-image: url("/images/twitter.png");
 	background-size: contain;
